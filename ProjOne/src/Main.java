@@ -6,9 +6,11 @@ public class Main {
         System.out.println("You are in a land full of dragons.");
         System.out.println("In front of you, you see two caves. In one cave, the dragon is friendly and will share his treasure with you.");
         System.out.println("The other dragon is greedy and hungry and will eat you on sight. Which cave will you go into? (1 or 2)");
-        if (!guessNumber.hasNextInt()){
-            System.out.println("Please enter a valid number. Try again.");
-        } else {
+
+        try {
+//            if (!guessNumber.hasNextInt()){
+//                System.out.println("Please enter a valid number. Try again.");
+//            } else {
             switch (guessNumber.nextInt()) {
                 case 1:
                     System.out.println("You approach the cave..." +
@@ -23,6 +25,10 @@ public class Main {
                 default:
                     System.out.println("Please choose 1 or 2");
             }
+//            }
+        } catch (Exception e){
+            System.out.println("Caught Error: Invalid selection. Must be an integer.");
         }
+
     }
 }
