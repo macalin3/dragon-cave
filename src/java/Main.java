@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class Main {
+    private static int answer;
+
     public static void main(String[] args) {
         Scanner guessNumber = new Scanner (System.in);
         System.out.println("You are in a land full of dragons.");
@@ -31,4 +33,10 @@ public class Main {
         }
 
     }
+
+    public static int getOption(int i) {
+        answer = i;
+        return answer;
+    }
+
 }
